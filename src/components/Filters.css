@@ -63,3 +63,8 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
+.price-filter,
+.brands-filter {
+    padding-bottom: 20px;
+}

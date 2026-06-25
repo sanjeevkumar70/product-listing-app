@@ -12,7 +12,12 @@ export default function ProductCard({ product }) {
             <img src={product.thumbnail} alt={product.title} />
             <h3>{product.title}</h3>
             <p>${product.price}</p>
-            <span>⭐ {product.rating}</span>
+            <span className="rating">
+                {Array.from({ length: product.rating }, (_, i) => (
+                    <span key={i}>⭐</span>
+                ))}
+                &nbsp;({product.rating})
+            </span>
         </div>
     );
 }

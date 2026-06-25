@@ -43,8 +43,11 @@ export default function ProductDetail() {
                         <span className="price">
                             ${product.price}
                         </span>
-                        <span className="rating">
-                            ⭐ ({product.rating})
+                        <span className="rating"> 
+                            {Array.from({ length: product.rating }, (_, i) => (
+                                <span key={i}>⭐</span>
+                            ))}
+                            &nbsp;({product.rating})
                         </span>
                     </div>
 
